@@ -30,7 +30,7 @@
         </div>        
     </form>
 </div>
-
+<!--======================VERIFICATOR=================================-->
 <div id="message" class="message-form">
     <form action="register-actions.php" method="post">
     <h3>Le mots de passe doit contenir les éléments suivants</h3>

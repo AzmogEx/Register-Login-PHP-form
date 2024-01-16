@@ -16,6 +16,7 @@
 	margin-top: 10px;
 	letter-spacing: 0.5px;
 	animation: anime 0.5s ease-out;
+	margin-top: -35px;
 }
 
 #message P {
@@ -87,4 +88,44 @@
 	from {
 		transform: translateY(100px);
 	}
+}
+
+/* ===================BUTTON ACCUEIL======================== */
+.accueil {
+	width: 340px;
+	margin: auto;
+	font-size: 15px;
+	margin-top: -55px;
+}
+
+.accueil {
+	margin-bottom: 15px;
+	padding: 30px;
+}
+
+/* ===================BUTTON STYLE======================== */
+
+.btn-accueil {
+	background-color: #7634e3;
+	color: white; /* Text color */
+	border-radius: 20px;
+}
+
+.btn-accueil:hover {
+	background-color: #432476; /* Change color on hover if needed */
+}
+
+.btn-close {
+	background-color: 7634e3;
+	font-size: 1.5rem;
+	color: red;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+.btn-close:hover {
+	color: darkred; /* Change color on hover if needed */
 }

@@ -14,7 +14,7 @@
 <body>
 <div class="register-form">
     <form action="register-actions.php" method="post">
-        <h2 class="text-center">Register</h2>       
+        <h2 class="text-center">Créer un compte</h2>       
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" name="login" required="required">
         </div>
@@ -41,6 +41,12 @@
         <p id="length" class="invalid">8 caractères minimum</p>
     </div>
     </form>
+</div>
+<!--======================ACCUEIL BUTTON=================================-->
+<div class="accueil-form">
+    <div class="accueil">
+    <a href="index.php" class="btn-close btn-close-hover">Accueil</a>
+    </div>
 </div>
 
 <script src="script.js"></script>

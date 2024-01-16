@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+/* ===================MESSAGE======================== */
 #message {
 	display: none;
 	flex-direction: column;
@@ -39,33 +39,14 @@
 .message-form h2 {
 	margin: 0 0 15px;
 }
-
-.register-form {
-	width: 340px;
-	margin: 50px auto;
-	font-size: 15px;
-}
-
-.register-form form {
-	margin-bottom: 15px;
-	background: #f7f7f7;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	padding: 30px;
-}
-.register-form h2 {
-	margin: 0 0 15px;
-}
-
+/* ===================BUTTON======================== */
 .btn {
 	min-height: 38px;
 	border-radius: 2px;
-}
-
-.btn {
 	font-size: 15px;
 	font-weight: bold;
 }
-
+/* =================VALIDATOR========================== */
 .invalid {
 	color: red;
 }
@@ -84,10 +65,26 @@
 	left: -7px;
 	content: "✅";
 }
+/* ===================FORMULAIRE======================== */
+.register-form {
+	width: 340px;
+	margin: 50px auto;
+	font-size: 15px;
+}
+
+.register-form form {
+	margin-bottom: 15px;
+	background: #f7f7f7;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+.register-form h2 {
+	margin: 0 0 15px;
+}
 
 /* Animation message */
 @keyframes anime {
 	from {
-		transform: translateY(100);
+		transform: translateY(100px);
 	}
 }

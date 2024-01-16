@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,6 +17,12 @@
 </head>
 <body>
 <div class="login-form">
+
+<?php if (isset($_SESSION['errorMessage']) && !empty($_SESSION['errorMessage'])) : ?>
+            <p class="text-center text-danger"><?php echo $_SESSION['errorMessage']; ?></p>
+            <?php unset($_SESSION['errorMessage']); ?>
+        <?php endif; ?>
+
     <form action="login-action.php" method="post">
         <h2 class="text-center">Log in</h2>
         <div class="form-group">

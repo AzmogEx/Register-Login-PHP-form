@@ -1,19 +1,5 @@
 <?php
-if (isset($_GET['error'])) {
-    $errorMessage = "";
-    switch ($_GET['error']) {
-        case 'exists':
-            $errorMessage = "Ce nom d'utilisateur existe déjà.";
-            break;
-        case 'weakpassword':
-            $errorMessage = "Le mot de passe ne respecte pas les critères de sécurité.";
-            break;
-        default:
-            $errorMessage = "Une erreur inconnue s'est produite.";
-            break;
-    }
-    echo '<p class="text-danger">' . $errorMessage . '</p>';
-}
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -38,8 +24,14 @@ if (isset($_GET['error'])) {
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Username" name="login" required="required">
                 <?php
-                if (isset($_GET['error']) && $_GET['error'] === 'exists') {
-                    echo '<p class="text-danger">le nom d\'utilisateur existe déjà ou alors le mdp n\'est pas conforme.</p>';
+                if (isset($_SESSION['errors'])) {
+                    foreach ($_SESSION['errors'] as $error) {
+                        echo '<p class="text-danger">' . $error . '</p>';
+                    }
+                    unset($_SESSION['errors']);
+                } elseif (isset($_SESSION['success'])) {
+                    echo '<p class="text-success">' . $_SESSION['success'] . '</p>';
+                    unset($_SESSION['success']); // Supprime le message de succès pour qu'il ne s'affiche qu'une fois
                 }
                 ?>
             </div>

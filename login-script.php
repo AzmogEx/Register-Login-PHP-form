@@ -5,7 +5,7 @@ $user = filter_input(INPUT_POST, "login", FILTER_SANITIZE_STRING);
 $mdp = $_POST["pass"];
 
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=base_projet_login', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=base_projet_login', 'root', '');
 } catch (Exception $e) {
     die("L'accès à la base de données est impossible.");
 }

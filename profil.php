@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+include_once 'authentification.inc.php';
+
+//verification utilisateur connecté
+if (!isset($_SESSION['user'])) {
+    header("Location: login-form.php");
+    exit();
+}
+logout();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,18 +27,15 @@
 </head>
 
 <body>
-    <h1 class="text-center">BIENVENUE</h1>
     <div class="register-form">
         <form method="post">
-            <h2 class="text-center">Choix Pages</h2>
+            <h1 class="text-center">Bienvenue
+                <?php echo $_SESSION["user"]; ?>!
+            </h1>
+            <h2 class="text-center">Vous êtes connecté !</h2>
+            <button type="submit" name="logout" class="btn btn-primary btn-block">Se déconnecter</button>
             <div class="form-group">
-                <a href="register-form.php" class="btn btn-primary btn-block">Register</a>
-            </div>
-            <div class="form-group">
-                <a href="login-form.php" class="btn btn-primary btn-block">Login</a>
-            </div>
-            <div class="form-group">
-                <a href="profil.php" class="btn btn-primary btn-block">profil</a>
+                <a href="index.php" class="btn mt-3 btn-primary btn-block">Accueil</a>
             </div>
         </form>
     </div>
